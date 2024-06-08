@@ -6,7 +6,7 @@ use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class SuperAdminSeeder extends Seeder
+class AdminSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,10 +14,10 @@ class SuperAdminSeeder extends Seeder
     public function run(): void
     {
         User::create([
-            'first_name' => 'Super',
+            'first_name' => 'Admin',
             'last_name' => 'Admin',
-            'email' => 'super-admin@admin.com',
+            'email' => 'admin@admin.com',
             'password' => bcrypt('password'),
-        ])->assignRole('super admin');
+        ])->assignRole('admin');
     }
 }
