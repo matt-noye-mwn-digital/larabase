@@ -8,6 +8,13 @@
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
+                    @env('local')
+                        <div class="btn-group">
+                            <x-login-link email="super-admin@admin.com" label="Super Admin Login"/>
+                            <x-login-link email="" label="Staff Login"/>
+                            <x-login-link email="" label="Customer / Client Login"/>
+                        </div>
+                    @endenv
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
                         <i class="fas fa-user"></i>
