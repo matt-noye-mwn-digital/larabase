@@ -11,8 +11,8 @@
                     @env('local')
                         <div class="btn-group">
                             <x-login-link email="super-admin@admin.com" label="Super Admin Login"/>
-                            <x-login-link email="" label="Staff Login"/>
-                            <x-login-link email="" label="Customer / Client Login"/>
+                            <x-login-link email="test-staff@test.com" label="Staff Login"/>
+                            <x-login-link email="test-client@test.com" label="Customer / Client Login"/>
                         </div>
                     @endenv
                     <form method="POST" action="{{ route('login') }}">
