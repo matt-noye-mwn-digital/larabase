@@ -2,7 +2,12 @@
     <div class="topbar">
         <div class="container-fluid div row align-items-center">
             <div class="col-xl-3"></div>
-            <div class="col-xl-6"></div>
+            <div class="col-xl-6">
+                <form action="" method="post" class="searchFormMain">
+                    @csrf
+
+                </form>
+            </div>
             <div class="col-xl-3 d-lg-flex justify-content-lg-end">
                 <ul class="list-inline topbarEndList">
                     <li class="list-inline-item">
