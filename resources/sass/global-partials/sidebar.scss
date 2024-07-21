@@ -1,0 +1,17 @@
+aside.sidebar {
+
+    height: 100svh;
+    left: -20%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 4rem 0;
+    position: fixed;
+    top: 0;
+    width: 15%;
+    z-index: 1;
+
+    &.open {
+        left: 0;
+        width: 15%;
+    }
+}

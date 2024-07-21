@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminDashboardController;
+use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,7 +21,7 @@ Route::get('/', function () {
 
 //Admin Routes
 Route::middleware(['auth', 'role:super admin|admin'])->name('admin.')->prefix('admin')->group(function () {
-
+    Route::get('dashboard', [AdminDashboardController::class,'index'])->name('dashboard');
 });
 
 //Client / Customer Routes
@@ -33,6 +35,7 @@ Route::middleware(['auth', 'role:super admin|staff'])->name('staff.')->prefix('s
 });
 
 Auth::routes();
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -25,12 +26,21 @@ class LoginController extends Controller
         if($user->hasRole(['super admin', 'admin'])) {
             return redirect()->route('admin.dashboard');
         }
-        elseif($user->hasRole(['staff'])) {
+        elseif($user->hasRole('staff')) {
             return redirect()->route('staff.dashboard');
         }
         elseif($user->hasRole(['customer', 'client'])) {
             return redirect()->route('client.dashboard');
         }
+    }
+
+    public function logout(Request $request){
+        Auth::logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return $this->loggedOut($request) ?: redirect('/login');
     }
 
     /**
