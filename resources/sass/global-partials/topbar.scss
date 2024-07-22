@@ -4,6 +4,50 @@ header {
         border-bottom: 1px solid $lightGrey2;
         padding: 1rem 0;
 
+        form.searchFormMain {
+            .input-group {
+                border: 1px solid $offBlack;
+                border-radius: 5px;
+            }
+            input[type='text'] {
+                background-color: $white;
+                border: 0;
+                box-shadow: none;
+
+                @include transition(all .4s ease-in-out);
+
+                &:focus {
+                    background-color: $white;
+                    border: 0;
+                    box-shadow: none;
+                    outline: none;
+                }
+            }
+            button {
+                background-color: transparent;
+                border: 0;
+                border-radius: 0;
+                box-shadow: none;
+                color: $black;
+                font-size: 1.1rem;
+                outline: none;
+                padding: .5rem 1rem;
+                text-align: center;
+                @include transition(all .4s ease-in-out);
+
+                &:hover,
+                &:focus {
+                    background-color: transparent;
+                    border: 0;
+                    border-radius: 0;
+                    box-shadow: none;
+                    color: $blue;
+                    outline: none;
+                    text-decoration: none;
+                }
+            }
+        }
+
         ul.topbarEndList {
             align-items: center;
             display: flex;
@@ -53,7 +97,40 @@ header {
                             width: auto;
                         }
                     }
+                    .dropdown-menu {
+                        li {
+                            margin-bottom: 0;
+                            a,
+                            button {
+                                background-color: transparent;
+                                border: 0;
+                                border-radius: 0;
+                                color: $offBlack;
+                                display: block;
+                                margin-bottom: 0;
+                                opacity: .5;
+                                padding: .5rem 1rem;
+                                text-align: left;
+                                text-decoration: none;
+                                @include transition(all .4s ease-in-out);
+                                width: 100%;
+
+                                &:hover {
+                                    background-color: transparent;
+                                    border: 0;
+                                    border-radius: 0;
+                                    box-shadow: none;
+                                    color: $blue;
+                                    outline: none;
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
                 }
+            }
+            hr {
+                margin: .5rem 0;
             }
         }
 

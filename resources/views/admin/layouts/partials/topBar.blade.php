@@ -15,7 +15,7 @@
                 <ul class="list-inline topbarEndList">
                     <li class="list-inline-item">
                         <button class="sidebarMenuToggler">
-                            <i class="fas fa-bars"></i>
+                            <i class="fas fa-times"></i>
                         </button>
                     </li>
                     <li class="list-inline-item notifications">

@@ -21,11 +21,10 @@ aside.sidebar {
             width: 100%;
             a {
                 background-color: transparent;
-                color: $black;
+                color: $offBlack;
                 display: block;
                 font-family: $roboReg;
                 font-size: 1.2rem;
-                opacity: 0.5;
                 padding: .5rem 1rem;
                 text-decoration: none;
                 @include transition(all .4s ease-in-out);
