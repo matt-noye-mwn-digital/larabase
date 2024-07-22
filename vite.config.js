@@ -13,7 +13,7 @@ export default defineConfig({
                 'resources/js/app.js',
                 'resources/js/admin.js',
                 'resources/js/client.js',
-                'resources/js/staff.scss'
+                'resources/js/staff.js'
             ],
             refresh: true,
         }),

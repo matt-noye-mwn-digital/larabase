@@ -5,7 +5,10 @@
             <div class="col-xl-6">
                 <form action="" method="post" class="searchFormMain">
                     @csrf
-
+                    <div class="input-group">
+                        <input type="text" name="" id="" class="form-control">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </div>
                 </form>
             </div>
             <div class="col-xl-3 d-lg-flex justify-content-lg-end">
