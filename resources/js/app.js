@@ -12,6 +12,9 @@ $(document).ready(function(){
         });
     }
     if($(window).width <= 1080){
-
+        $('.sidebar').removeClass('open');
+        $('header .topbar button.sidebarMenuToggler').click(function(){
+            $('.sidebar').toggleClass('open', 1000);
+        });
     }
 });

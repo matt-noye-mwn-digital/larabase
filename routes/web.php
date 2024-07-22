@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminActivityLogController;
 use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Route;
@@ -22,6 +23,13 @@ Route::get('/', function () {
 //Admin Routes
 Route::middleware(['auth', 'role:super admin|admin'])->name('admin.')->prefix('admin')->group(function () {
     Route::get('dashboard', [AdminDashboardController::class,'index'])->name('dashboard');
+
+    //Activity Log
+    Route::name('activity-log.')->prefix('activity-log')->group(function () {
+        Route::get('/', [AdminActivityLogController::class, 'index'])->name('index');
+        Route::post('clear', [AdminActivityLogController::class, 'clearActivityLog'])->name('clear');
+
+    });
 });
 
 //Client / Customer Routes

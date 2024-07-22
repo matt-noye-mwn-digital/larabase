@@ -19,7 +19,7 @@
                     </li>
                     <hr>
                     <li>
-                        <a href="">Activity Log</a>
+                        <a href="{{ route('admin.activity-log.index') }}">Activity Log</a>
                     </li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
