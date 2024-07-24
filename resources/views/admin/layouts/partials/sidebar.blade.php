@@ -2,6 +2,9 @@
     <div class="container">
         <div class="row">
             <div class="col-12 px-0">
+                <a href="" class="brand">
+                    Larabase
+                </a>
                 <ul class="sidebar-nav">
                     <li>
                         <a href="{{ route('admin.dashboard') }}" class="{{ Route::is('admin.dashboard') ? 'active' : '' }}">Dashboard</a>

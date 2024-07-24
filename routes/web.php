@@ -44,6 +44,6 @@ Route::middleware(['auth', 'role:super admin|staff'])->name('staff.')->prefix('s
 
 Auth::routes();
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
