@@ -12,9 +12,9 @@
                         <div class="card-body">
                             @env('local')
                                 <div class="btn-group loginLinkBtnGroup ">
-                                    <x-login-link email="super-admin@admin.com" label="Super Admin Login"/>
-                                    <x-login-link email="test-staff@test.com" label="Staff Login"/>
-                                    <x-login-link email="test-client@test.com" label="Customer / Client Login"/>
+                                    <x-login-link :user-attributes="['role', 'super admin']" email="super-admin@admin.com" label="Super Admin Login" redirect-url="{{ route('admin.dashboard') }}"/>
+                                    <x-login-link :user-attributes="['role', 'staff']" email="test-staff@test.com" label="Staff Login" redirect-url="{{ route('staff.dashboard') }}"/>
+                                    <x-login-link :user-attributes="['role', 'client']" email="test-client@test.com" label="Customer / Client Login" redirect-url="{{ route('client.dashboard') }}"/>
                                 </div>
                             @endenv
                             <form method="POST" action="{{ route('login') }}">

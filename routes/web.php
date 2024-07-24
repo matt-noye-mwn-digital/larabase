@@ -3,6 +3,8 @@
 use App\Http\Controllers\Admin\AdminActivityLogController;
 use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Client\ClientDashboardController;
+use App\Http\Controllers\Staff\StaffDashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,12 +36,12 @@ Route::middleware(['auth', 'role:super admin|admin'])->name('admin.')->prefix('a
 
 //Client / Customer Routes
 Route::middleware(['auth', 'role:super admin|customer|client'])->name('client.')->prefix('client')->group(function () {
-
+    Route::get('dashboard', [ClientDashboardController::class, 'index'])->name('dashboard');
 });
 
 //Staff Routes
 Route::middleware(['auth', 'role:super admin|staff'])->name('staff.')->prefix('staff')->group(function () {
-
+    Route::get('dashboard', [StaffDashboardController::class, 'index'])->name('dashboard');
 });
 
 Auth::routes();

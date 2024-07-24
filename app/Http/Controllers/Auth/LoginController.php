@@ -24,12 +24,14 @@ class LoginController extends Controller
 
     protected function authenticated(Request $request, $user)
     {
-        if ($user->hasRole(['super admin', 'admin'])) {
+        if($user->hasRole(['super admin', 'admin'])) {
             return redirect()->route('admin.dashboard');
-        } elseif ($user->hasRole('engineer')) {
-            return redirect()->route('engineer.dashboard');
-        } elseif ($user->hasRole('customer')) {
-            return redirect()->route('customer.dashboard');
+        }
+        elseif($user->hasRole('staff')) {
+            return redirect()->route('staff.dashboard');
+        }
+        elseif($user->hasRole(['customer', 'client'])) {
+            return redirect()->route('client.dashboard');
         }
     }
 
