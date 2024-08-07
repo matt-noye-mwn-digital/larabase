@@ -59,15 +59,17 @@ aside.sidebar {
 
                 a.dropdown-toggle {
                     cursor: pointer;
+                    position: relative;
 
                     &:after {
+
                         @include transition(all .4s ease-in-out);
                     }
 
                     &.show {
 
                         &::after {
-
+                            transform: rotate(180deg);
                         }
                     }
                 }
