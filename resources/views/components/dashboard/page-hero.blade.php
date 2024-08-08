@@ -1,4 +1,4 @@
-<section class="adminPageHero">
+<section class="dashboardPageHero">
     <div class="container-fluid">
         @if($displayButton == 'Yes' || $displayButton == 'yes')
             <div class="row align-items-center">
