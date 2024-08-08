@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminActivityLogController;
 use App\Http\Controllers\Admin\AdminDashboardController;
+use App\Http\Controllers\Admin\AdminImageUploadController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Client\ClientDashboardController;
 use App\Http\Controllers\Staff\StaffDashboardController;
@@ -32,6 +33,11 @@ Route::middleware(['auth', 'role:super admin|admin'])->name('admin.')->prefix('a
         Route::post('clear', [AdminActivityLogController::class, 'clearActivityLog'])->name('clear');
 
     });
+
+    //File/image upload for TINYMCE WYSIWYG Editor
+    ROute::post('upload-image', [AdminImageUploadController::class, 'upload'])
+        ->name('upload-image')
+        ->middleware('web');
 });
 
 //Client / Customer Routes
