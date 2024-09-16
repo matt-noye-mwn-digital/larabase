@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\Admin;
+namespace App\View\Components\Dashboard;
 
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -28,6 +28,6 @@ class PageHero extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.admin.page-hero');
+        return view('components.dashboard.page-hero');
     }
 }
