@@ -1,7 +1,14 @@
-<header>
+<header class="sticky-top">
     <div class="topbar">
-        <div class="container-fluid div row align-items-center">
-            <div class="col-xl-3"></div>
+        <div class="d-flex align-items-center w-100 px-4">
+            <div class="col-xl-3 d-flex align-items-center">
+                <button class="sidebarMenuToggler">
+                    <i class="fas fa-times"></i>
+                </button>
+                <a href="" class="topbar-brand">
+                    {{ config('app.name') }}
+                </a>
+            </div>
             <div class="col-xl-6">
                 <form action="" method="post" class="searchFormMain">
                     @csrf
@@ -13,11 +20,6 @@
             </div>
             <div class="col-xl-3 d-lg-flex justify-content-lg-end">
                 <ul class="list-inline topbarEndList">
-                    <li class="list-inline-item">
-                        <button class="sidebarMenuToggler">
-                            <i class="fas fa-times"></i>
-                        </button>
-                    </li>
                     <li class="list-inline-item notifications">
                         <a class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fas fa-bell"></i>
