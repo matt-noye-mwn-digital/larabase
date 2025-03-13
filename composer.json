@@ -1,8 +1,8 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "laravel/laravel",
+    "name": "mwn-digital/larabase-plate",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
+    "description": "Larabase is a starter package for laravel, built out using Bootstrap and some other features.",
     "keywords": ["laravel", "framework"],
     "license": "MIT",
     "require": {
